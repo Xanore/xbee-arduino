@@ -304,7 +304,7 @@ RxResponse::RxResponse() : RxDataResponse() {
 }
 
 uint16_t Rx16Response::getRemoteAddress16() {
-	return (getFrameData()[0] << 8) + getFrameData()[1];
+	return (getFrameData()[1] << 8) + getFrameData()[2];
 }
 
 XBeeAddress64& Rx64Response::getRemoteAddress64() {
